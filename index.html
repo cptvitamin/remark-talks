@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Slide Deck</title>
+  <title>Accessibility Plan for Q2-Q3</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link href='//cptvitamin.github.io/remark-talks/assets/style.css' rel='stylesheet' type='text/css'>
     <link href='//cptvitamin.github.io/remark-edx/assets/style-edx.css' rel='stylesheet' type='text/css'>
+    <style>
+    .status {
+            float: right;
+            width: 35%;
+            padding: 0 0.5em;
+            margin-left: 0.5em;
+            background-color: #D9F1FB;
+            font-size: 70%;
+        }
+      .low, .med, .high {padding-left: 1em; }
+      .low { border-left: 10px solid green; }
+      .med { border-left: 10px solid yellow; }
+      .high { border-left: 10px solid red; }
+    </style>
   </head>
   <body>
 <label for="source" class="sr">Slide Deck</label>
@@ -12,13 +26,216 @@
 
 class: title middle left
 
-# Title
+# Accessibility Product Plan
 
-.subtitle[Sub title]
-
-.thirdtitle[Third title]
+.subtitle[Q2-Q3]
 
 ---
+
+## Major Initiatives
+
+* Automated Testing
+* Video Player revamp
+* Assessments remediation
+* Ongoing remediation
+* Outside Audit
+* DOJ Reporting
+* Learning Series Course
+* Organizational support
+
+---
+
+## Automated Testing
+
+* New framework is now in place
+* Two opensource rulesets to choose from
+  * aXe Core (by Deque)
+      * Pass/Fail
+  * Chrome Accessibility Dev Tools (Google)
+      * Includes issues that need manual verification
+* Developer training complete
+* Example tests available
+* New tests are now being created
+ 
+---
+ 
+## Automated Testing Plan
+
+.status[
+### Risk/Difficulty
+
+.med[Medium]
+]
+   
+* Increase test coverage.
+  * Add framework and tests to other repositories (e.g. Insights and ORA2) 
+  * Add more tests to platform (retroactively)
+
+---
+
+## Automated Testing Plan
+
+.status[
+### Risk/Difficulty
+
+.med[Medium]
+]
+
+* Find a way to measure coverage
+  * How many pages are we testing?
+  * How many rules/elements are being ignored? (due to known issues)
+  
+---
+
+## Automated Testing Plan
+
+.status[
+### Risk/Difficulty
+
+.low[Low]
+]
+
+* Add support for HTML Validation 
+  * This is not just for accessibility, but it directly affects it.
+  * Define process for logging and remediating existing errors
+  
+---
+
+## Automated Testing Plan
+
+.status[
+### Risk/Difficulty
+
+.low[Low]
+]
+
+* Add a crawler to periodically audit a live site.
+  * Establish a baseline
+  * Track progress over time
+  * Identify regressions or new errors
+* Add support for custom rules
+
+---
+
+## Video Player
+
+.status[
+### Risk/Difficulty
+
+.med[Medium]
+]
+
+* Remediate existing issues
+* Add enhanced support for accessibility
+* Make necessary UI changes for new features
+* Add support for overlay captions
+
+---
+
+## Assessment Remediation
+
+.status[
+### Risk/Difficulty
+
+.high[High]
+]
+
+* Comprehensive evaluation
+  * Define use cases and requirements
+  * Coordinate with other teams
+  * Forumulate approach for re-engineering assessments from the ground up
+
+---
+
+## Outside Audit
+
+.status[
+### Risk/Difficulty
+
+.low[Low]
+]
+
+* First audit due by April 2nd 2016
+  * Identify scope/products for testing
+  * Issue RFP to contractors
+  * Select contractor
+  * Refine scope
+
+---
+
+## DOJ Reporting
+
+.status[
+### Risk/Difficulty
+
+.low[Low]
+]
+
+* First round of reporting (9 month obligation)
+  * Due January 2nd, 2016
+
+---
+
+## Learning Series
+
+.status[
+### Risk/Difficulty
+
+.med[Medium]
+]
+
+* Create a new Learning Series course (available to partners/public) based on edX Staff Training course
+  * Sanitize
+  * Rewrite for new audience
+  * Expand topic coverage and detail
+  * Improve assessments
+
+---
+
+## Organizational Support
+
+.status[
+### Risk/Difficulty
+
+.low[Low]
+]
+
+* Design and Development Support
+* Feature Testing
+* Continued Training and Documentation
+
+---
+
+## Upcoming Talks
+
+* NGDLE (Washington, DC) Oct 22
+  * Next Generation Digital Learning Environment
+  * Beth and Mark interviewed separately
+  * Discuss findings of whitepaper
+  * Define next steps
+  * Present at Educause Conference
+  
+---
+
+## Upcoming Talks
+
+* W3C TPAC (Sapporo, Japan) Oct 26-30
+  * HTML Accessibility Task Force
+      * (Canvas, Panels, Drag and Drop)
+  * HTML WG
+  * Web Apps WG
+  * Protocols and Formats WG
+  * Web Payments WG
+  * Digital Publishing WG
+  * Multimodal IG
+  
+---
+
+## Upcoming Talks
+
+* International Technology and Persons with Disabilities Conference
+  * Invitation to talk about Automated Accessibility testing with the aXe Core ruleset
+  
 
 </textarea>
     <script src="//gnab.github.io/remark/downloads/remark-latest.min.js">
@@ -41,7 +258,7 @@ class: title middle left
           // Enable or disable navigation using click
           // Default: false
           // Alternatives: true
-          click: true
+          click: false
         },
     });
     </script>
