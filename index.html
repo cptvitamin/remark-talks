@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Slide Deck</title>
+    <title>Manual Accessibility Testing</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link href='//cptvitamin.github.io/remark-talks/assets/style.css' rel='stylesheet' type='text/css'>
     <link href='//cptvitamin.github.io/remark-edx/assets/style-edx.css' rel='stylesheet' type='text/css'>
@@ -12,13 +12,87 @@
 
 class: title middle left
 
-# Title
+# Manual Accessibility Testing
 
-.subtitle[Sub title]
+.subtitle[in three easy steps]
 
-.thirdtitle[Third title]
+.thirdtitle[[sadecki.com/talks/edx-manual-testing/](http://sadecki.com/talks/edx-manual-testing/)]
 
 ---
+
+### Just three steps?
+
+* Perform automated tests
+* Use your keyboard
+* Perform manual checks
+
+---
+
+### Automated tests
+
+* [Deque aXe](http://www.deque.com/products/aXe/) ([Firefox](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/) and [Chrome](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd) extensions)
+* [Chrome Accessibility Developer Tools](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb)
+* [WebAIM WAVE Toolbar](http://wave.webaim.org/extension/) (Chrome)
+* HTML Validation ([validator.nu](https://validator.nu))
+
+---
+
+### Use your keyboard
+
+* Absolutely NO cheating
+    * ESC, TAB, space, return (sometimes arrow keys)
+* On a Mac, may require configuration change
+    * Keyboard -> Shorcuts -> Full keyboard access (Control + F7)
+    * [chrome://settings/](chrome://settings/) -> Web Content Pressing Tab on a webpage highlights links and form fields
+* Is focus clearly visible at all times?
+* Is there a logical focus order?
+* Is it laborious?
+* document.activeElement()
+
+---
+
+### Manual checks
+
+* View alt text (is it a functional equivalent?)
+* View screen reader text (is it a functional eqivalent for visual content?)
+    * Web Developer Toolbar ([Firefox](https://addons.mozilla.org/en-US/firefox/addon/web-developer/) and [Chrome](https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm))
+* Translatable content? Is language programmatically defined?
+* Does your interface use *any* scripting?
+    * Are labels, instructions, and error messages clear?
+    * Using javascript? Are all [roles](https://www.w3.org/TR/wai-aria/roles), [states, and properties](https://www.w3.org/TR/wai-aria/states_and_properties) programatically defined and properly managed?
+
+---
+
+class: title middle right
+
+## Bonus points!
+
+.subtitle[Use a screenreader]
+
+---
+
+### Screenreaders
+
+* Mac: Voiceover (CMD + F5)
+    * Safari only
+* Linux: Orca (build from Edge)
+    * Firefox only
+* Windows: [NVDA](http://www.nvaccess.org/)
+    * Firefox
+* All platforms: [Chromevox](http://www.chromevox.com/)
+    * Chrome extention
+    
+---
+
+### SR Emulators
+
+* [Fangs](https://addons.mozilla.org/en-US/firefox/addon/fangs-screen-reader-emulator/) (Firefox)
+* Chrome Accessibility Developer Tools
+
+---
+
+[sadecki.com/talks/edx-manual-testing/](http://sadecki.com/talks/edx-manual-testing/)
+
 
 </textarea>
     <script src="//gnab.github.io/remark/downloads/remark-latest.min.js">
