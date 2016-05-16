@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Slide Deck</title>
+    <title>Results of the Spring 2016 Accessibility Audit</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link href='//cptvitamin.github.io/remark-talks/assets/style.css' rel='stylesheet' type='text/css'>
     <link href='//cptvitamin.github.io/remark-edx/assets/style-edx.css' rel='stylesheet' type='text/css'>
@@ -12,13 +12,223 @@
 
 class: title middle left
 
-# Title
+# Accessibility Audit Results
 
-.subtitle[Sub title]
+.subtitle[The results are in, and they're pretty good!]
 
-.thirdtitle[Third title]
+.thirdtitle[AKA - Why did someone just dump a bunch of bugs on my board?]
 
 ---
+
+## Quick update and accolades
+
+<div style="width: 60%; float:left">
+  <img src="https://talks.sadecki.com/a11y-audit-2016/assets/deque-edx-a11y.png" alt="Presentation slide that lists edX at the top of a list of 9 Educational web sites when ranked by number of accessibility errors on the home page.  EdX has 2 errors. Next in the list has 9.  The worst has 61." />
+</div>
+
+.float-left[
+* Khan Academy: 12
+* Udacity: 26
+* Udemy: 50
+* Coursera: 69
+]
+
+---
+
+## Why were we audited?
+
+* Settlement Agreement with DOJ (April 2nd, 2015)
+  * Documentation
+  * Training
+  * Support
+  * Policy
+  * Remediation
+  * Ongoing Conformance (WCAG 2 AA)
+  * *Annual Audits*
+
+---
+
+## Scope of conformance
+
+*Conformance Deadline: WCAG 2 AA by October 2nd, 2016*
+
+* Public site (edx.org) 
+* LMS
+* Studio (April 2nd, 2018)
+* Mobile apps
+* Anything with an edx.org domain
+
+*Do I have to make this accessible, too?* Yes
+
+---
+
+## Audit Obligations
+
+Conducted by independent consultant approved by DOJ.  
+Results delivered directly to DOJ
+ 
+* April 2nd 2016 (Informative)
+  * Baseline
+* April 2nd 2017 (Binding)
+* April 2nd 2018 (Binding)
+  * 90 days to fix issues identified
+  * Same obligation applies to bugs identified after conformance deadline
+
+---
+
+## Audit Results April 2016
+
+* Audit was conducted by SSB Bart
+* Public website (15 unique pages)
+* LMS (demo-test-course)
+* Studio (demo-test-course)
+* Android (App store version)
+* iOS (App store version
+* WCAG 2 Conformance Statement
+* Executive Summary (DOJ)
+* Detailed results published in AMP
+
+---
+
+## Public website
+
+* WCAG 2.0 A (71%)
+* WCAG 2.0 AA (89%)
+* 248 Total Issues
+* 81 Unique
+  * 28 CAT-3
+  * 32 CAT-4
+  * 21 CAT-5
+  
+---
+
+## Most Common Issues (Public website)
+
+* Improper list markup
+* Contrast
+* Improper user of placeholder text
+* Modal dialogs that don't contain focus
+* Forms without labels
+* Improper focus management
+* Custom controls invalid or missing roles and descriptions
+* Improper use of Heading elements
+* Non-unique or not descriptive headings, labels, link text
+* Missing alt text
+
+---
+
+## LMS website
+
+* WCAG 2.0 A (74%)
+* WCAG 2.0 AA (98%)
+* 120 Total Issues
+* 49 Unique
+  * 28 CAT-3
+  * 18 CAT-4
+  * 3 CAT-5
+
+---
+
+## Most Common Issues (LMS)
+
+* Improper list markup
+* Custom controls invalid or missing roles and descriptions
+* CSS Background images
+* Invalid tablists controls
+* Forms without labels
+* Improper focus management
+* Missing live regions
+* Missing keyboard functionality
+* Missing text equivalents for icon fonts
+
+---
+
+## Studio website
+
+* WCAG 2.0 A (67%)
+* WCAG 2.0 AA (92%)
+* 192 Total Issues
+* Unique (TBD)
+
+---
+
+## Most Common Issues (Studio)
+
+* Form field labels
+* Alt text for images
+* Custom controls invalid or missing roles and descriptions
+* Improper focus management
+* Missing live regions
+* CSS Background images
+* Missing keyboard functionality
+
+---
+
+## iOS
+
+* WCAG 2.0 A (77%)
+* WCAG 2.0 AA (84%)
+* 22 Unique Issues
+  * 8 CAT-3
+  * 14 CAT-4
+  
+---
+
+## Android
+
+* WCAG 2.0 A (77%)
+* WCAG 2.0 AA (84%)
+* 12 Unique Issues
+  * 6 CAT-3
+  * 6 CAT-4
+
+---
+
+## Most Common Issues (Mobile)
+
+* Controls without labels, role, or state information
+* Focus management and focus order
+* Hidden, decorative, duplicate content exposed to SR users
+* Forms without labels
+* Contrast
+
+---
+
+## Remediation Plans
+
+* Different for each team
+  * Let's talk and put a plan together
+  * Bug bash?
+  * Fixed number per sprint?
+  * Temporary team?
+* Assessment Engine (CAPA) Refactor
+  
+---
+
+## Resources and Support
+
+* More Training
+  * Weekly unmeetings
+  * Lunch and learns
+* Improved Documentation
+  * Accessibility Training Course
+  * edX Accessibility Guidelines (edX Developers Guide)
+  * Confluence - Accessibility Fundamentals
+* More tooling
+
+---
+
+## Overall Impression
+
+* More Level A violations than expected
+  * Highest impact
+  * Easiest to remedy
+  * Least constraining
+  * 100% compliance required to satisfy Level AA
+* @50% can be identified with automated tests
+  * We need progress on both fronts
+  * More test development
+  * More developer training
 
 </textarea>
     <script src="//gnab.github.io/remark/downloads/remark-latest.min.js">
@@ -41,7 +251,7 @@ class: title middle left
           // Enable or disable navigation using click
           // Default: false
           // Alternatives: true
-          click: true
+          click: false
         },
     });
     </script>
