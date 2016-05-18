@@ -5,6 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link href='//cptvitamin.github.io/remark-talks/assets/style.css' rel='stylesheet' type='text/css'>
     <link href='//cptvitamin.github.io/remark-edx/assets/style-edx.css' rel='stylesheet' type='text/css'>
+    <style>
+      blockquote { border-left: 10px solid #009CfC; font-style: italic; padding-left: 1em; line-height: 1.8em;}
+    </style>
   </head>
   <body>
 <label for="source" class="sr">Slide Deck</label>
@@ -12,11 +15,11 @@
 
 class: title middle left
 
-# Accessibility Audit Results
+# Accessibility Update
 
-.subtitle[The results are in, and they're pretty good!]
+.subtitle[Audit Results are in]
 
-.thirdtitle[AKA - Why did someone just dump a bunch of bugs on my board?]
+.thirdtitle[The road to Oct 2nd, 2016]
 
 ---
 
@@ -35,30 +38,16 @@ class: title middle left
 
 ---
 
-## Why were we audited?
+## Agreement update
 
 * Settlement Agreement with DOJ (April 2nd, 2015)
-  * Documentation
-  * Training
-  * Support
-  * Policy
-  * Remediation
-  * Ongoing Conformance (WCAG 2 AA)
-  * *Annual Audits*
-
----
-
-## Scope of conformance
-
-*Conformance Deadline: WCAG 2 AA by October 2nd, 2016*
-
-* Public site (edx.org) 
-* LMS
-* Studio (April 2nd, 2018)
-* Mobile apps
-* Anything with an edx.org domain
-
-*Do I have to make this accessible, too?* Yes
+  * Documentation (2/2)
+  * Training (2/4)
+  * Support (1/1)
+  * Policy (6/6)
+  * Remediation and conformance (0/2)
+  * Reporting (1/4)
+  * Annual Audits (1/3)
 
 ---
 
@@ -76,17 +65,45 @@ Results delivered directly to DOJ
 
 ---
 
-## Audit Results April 2016
+class: title middle left
+
+# April 2016 Audit
+
+.subtitle[Audit #1 - Informative]
+
+---
+
+## Audit details
 
 * Audit was conducted by SSB Bart
-* Public website (15 unique pages)
-* LMS (demo-test-course)
-* Studio (demo-test-course)
-* Android (App store version)
-* iOS (App store version
+  * Public website (15 unique pages)
+  * LMS (demo-test-course)
+  * Studio (demo-test-course)
+  * Android (April App store version)
+  * iOS (April App store version)
 * WCAG 2 Conformance Statement
 * Executive Summary (DOJ)
 * Detailed results published in AMP
+
+---
+
+## Executive Summary
+
+<blockquote>The website provided very positive results to functional tests performed by users with disabilities. Out of five use cases across three assistive technologies, no users found accessibility issues large enough to fail a single use case . The use cases covered the core areas of the site, asking users to register for an account, sign up for a class, search through the help center, modify their account’s settings, and update to a verified certificate course. </blockquote>
+
+---
+
+## Executive Summary
+
+<blockquote>
+Manual testing corroborated the functional testing results; violations were noted, but none would actively prevent a user from accessing content. The most commonly noted challenges included custom controls that did not contain valid role and state information, contrast violations, and form fields either using only placeholders as labels or not having any programmatically determinable labels.
+</blockquote>
+
+---
+
+class: title middle left
+
+# Summary of Detailed Results
 
 ---
 
@@ -96,24 +113,9 @@ Results delivered directly to DOJ
 * WCAG 2.0 AA (89%)
 * 248 Total Issues
 * 81 Unique
-  * 28 CAT-3
-  * 32 CAT-4
-  * 21 CAT-5
-  
----
-
-## Most Common Issues (Public website)
-
-* Improper list markup
-* Contrast
-* Improper user of placeholder text
-* Modal dialogs that don't contain focus
-* Forms without labels
-* Improper focus management
-* Custom controls invalid or missing roles and descriptions
-* Improper use of Heading elements
-* Non-unique or not descriptive headings, labels, link text
-* Missing alt text
+  * 28 High Impact
+  * 32 Medium Impact
+  * 21 Low Impact
 
 ---
 
@@ -123,23 +125,9 @@ Results delivered directly to DOJ
 * WCAG 2.0 AA (98%)
 * 120 Total Issues
 * 49 Unique
-  * 28 CAT-3
-  * 18 CAT-4
-  * 3 CAT-5
-
----
-
-## Most Common Issues (LMS)
-
-* Improper list markup
-* Custom controls invalid or missing roles and descriptions
-* CSS Background images
-* Invalid tablists controls
-* Forms without labels
-* Improper focus management
-* Missing live regions
-* Missing keyboard functionality
-* Missing text equivalents for icon fonts
+  * 28 High Impact
+  * 18 Medium Impact
+  * 3 Low Impact
 
 ---
 
@@ -152,25 +140,13 @@ Results delivered directly to DOJ
 
 ---
 
-## Most Common Issues (Studio)
-
-* Form field labels
-* Alt text for images
-* Custom controls invalid or missing roles and descriptions
-* Improper focus management
-* Missing live regions
-* CSS Background images
-* Missing keyboard functionality
-
----
-
 ## iOS
 
 * WCAG 2.0 A (77%)
 * WCAG 2.0 AA (84%)
 * 22 Unique Issues
-  * 8 CAT-3
-  * 14 CAT-4
+  * 8 High Impact
+  * 14 Medium Impact
   
 ---
 
@@ -179,43 +155,18 @@ Results delivered directly to DOJ
 * WCAG 2.0 A (77%)
 * WCAG 2.0 AA (84%)
 * 12 Unique Issues
-  * 6 CAT-3
-  * 6 CAT-4
-
----
-
-## Most Common Issues (Mobile)
-
-* Controls without labels, role, or state information
-* Focus management and focus order
-* Hidden, decorative, duplicate content exposed to SR users
-* Forms without labels
-* Contrast
+  * 6 High Impact
+  * 6 Medium Impact
 
 ---
 
 ## Remediation Plans
 
 * Different for each team
-  * Let's talk and put a plan together
-  * Bug bash?
-  * Fixed number per sprint?
-  * Temporary team?
-* Assessment Engine (CAPA) Refactor
+  * Largest number of bugs in ECOM (many are content/Drupal related)
+  * Accessibility team working on vast majority of LMS issues
+  * Assessment Engine (CAPA) Refactor - T&amp;L
   
----
-
-## Resources and Support
-
-* More Training
-  * Weekly unmeetings
-  * Lunch and learns
-* Improved Documentation
-  * Accessibility Training Course
-  * edX Accessibility Guidelines (edX Developers Guide)
-  * Confluence - Accessibility Fundamentals
-* More tooling
-
 ---
 
 ## Overall Impression
@@ -224,11 +175,87 @@ Results delivered directly to DOJ
   * Highest impact
   * Easiest to remedy
   * Least constraining
-  * 100% compliance required to satisfy Level AA
+  * 100% compliance required to satisfy agreement
 * @50% can be identified with automated tests
   * We need progress on both fronts
   * More test development
   * More developer training
+  
+---
+
+## Accessibility Team Resources and Support
+
+* More Training
+  * Weekly unmeetings
+  * Lunch and learns
+* Improved Documentation
+  * edX Accessibility Guidelines (edX Developers Guide)
+  * Accessibility Training Course
+  * Confluence - Accessibility Fundamentals
+* More tooling
+  
+---
+
+## Challenges to meeting 10/2 Deadline
+
+* Discovery of existing issues (tooling)
+* Preventing new bugs from being introduced
+
+---
+
+class: title middle left
+
+# Discovering *more* existing issues
+
+.subtitle[Once we know about them, we have to fix them.]
+
+---
+
+## How do we deal with more old issues?
+
+* Resources
+  * Planning for tech debt
+* Prioritization
+  * Flexibility in resource allocation
+
+---
+
+class: title middle left
+
+# Preventing new issues
+
+.subtitle[It takes a village]
+
+.thirdtitle[The ask]
+
+---
+
+## How do we prevent new accessibility issues?
+
+We need a culture change
+
+* *Do I have to make this accessible, too?*
+  * *Is this covered under the agreement?*
+  * *This is going to be hard/take a lot of work to make accessible. Do we still have to do it?*
+  * *How many users does this really affect?*
+
+---
+
+## How do we prevent new accessibility issues?
+  
+We need to demonstrate our commitment from the top down.
+
+* Hire accessiblity aware employees
+* Something we *want* to do, not something we *have* to do
+* Begin with accessiblity (planning) not end with it (acceptance)
+* Make accessibilty a first class citizen
+* No compromises
+
+---
+
+class: title middle left
+
+# Questions?
 
 </textarea>
     <script src="//gnab.github.io/remark/downloads/remark-latest.min.js">
